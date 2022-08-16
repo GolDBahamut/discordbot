@@ -6,5 +6,20 @@
   },
   "scripts": {
     "start": "node index.js"
-  }
+  },
+  "name": "botdiscord",
+  "version": "1.0.0",
+  "description": "LeBahamut",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GolDBahamut/discordbot.git"
+  },
+  "author": "Finishim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GolDBahamut/discordbot/issues"
+  },
+  "homepage": "https://github.com/GolDBahamut/discordbot#readme"
 }
