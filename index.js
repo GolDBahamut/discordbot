@@ -575,13 +575,16 @@ client.on("messageCreate",async message =>
             .setColor("#d60000")
             .setTitle("Choisis une nouvelle couleur parmi ceux que tu as déjà")
             .setDescription("*Permet de changer de couleur*")
+            .addField("b.help","Affiche la liste des commandes")
+
             .setTimestamp()
             .setFooter("Finishim.G.D.B is the owner of this bot")
 
-        let roleSelect = message.reply(
+        const roleSelect = await message.reply(
             {
-                embeds: [embed],fetchReply:true
+                embeds: [embed]
             });
+
         roleSelect.react('<:yuliacry:1005511957685743717>');
     }
 });
