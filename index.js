@@ -568,105 +568,11 @@ client.on("messageCreate",async message =>
         };
    */
 
-    if(message.content === prefix + "roleColor")
+    if(message.content === prefix + "color")
     {    
-        const embed = new Discord.MessageEmbed()
 
-            .setColor("#d60000")
-            .setTitle("Choisis une nouvelle couleur parmi ceux que tu as déjà")
-            .setDescription("*Permet de changer de couleur*")
-            .addFields
-            (
-                {
-                    name: "<@892679883799543829>",
-                    value: "valuetest1",
-                    inline: true
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                },
-                {
-                    name: "test2",
-                    value: "valuetest2",
-                    inline: false
-                }
-
-            
-            )
-            .setTimestamp()
-            .setFooter("Finishim.G.D.B is the owner of this bot")
-
-        const roleSelect = await message.reply(
-            {
-                embeds: [embed]
-            });
+        const roleSelect = await message.reply
+        ("Choisis une couleur parmis ceux que tu as déjà \n ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ \n <@892679883799543829>\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1 ");
 
         roleSelect.react('<:yuliacry:1005511957685743717>');
     }
