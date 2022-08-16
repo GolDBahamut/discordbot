@@ -569,9 +569,20 @@ client.on("messageCreate",async message =>
    */
 
     if(message.content === prefix + "roleColor")
-    {
-        message.reply("Choisi une nouvelle couleur parmi ceux que tu as deja").react('<:yuliacry:1005511957685743717>');
+    {    
+        const embed = new Discord.MessageEmbed()
 
+            .setColor("#d60000")
+            .setTitle("Choisis une nouvelle couleur parmi ceux que tu as déjà")
+            .setDescription("*Permet de changer de couleur*")
+            .setTimestamp()
+            .setFooter("Finishim.G.D.B is the owner of this bot")
+
+        let roleSelect = message.reply(
+            {
+                embeds: [embed],fetchReply:true
+            });
+        roleSelect.react('<:yuliacry:1005511957685743717>');
     }
 });
 
