@@ -575,8 +575,21 @@ client.on("messageCreate",async message =>
             .setColor("#d60000")
             .setTitle("Choisis une nouvelle couleur parmi ceux que tu as déjà")
             .setDescription("*Permet de changer de couleur*")
-            .addField("b.help","Affiche la liste des commandes")
+            .addFields
+            (
+                {
+                    name: "test1",
+                    value: "valuetest1",
+                    inline: true
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                }
 
+            
+            )
             .setTimestamp()
             .setFooter("Finishim.G.D.B is the owner of this bot")
 
