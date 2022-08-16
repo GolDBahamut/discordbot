@@ -572,7 +572,7 @@ client.on("messageCreate",async message =>
     {    
 
         const roleSelect = await message.reply
-        ("Choisis une couleur parmis ceux que tu as déjà \n ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ \n <@892679883799543829>\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1 ");
+        ("Choisis une couleur parmis ceux que tu as déjà \n ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ \n\n <@master>\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1 ");
 
         roleSelect.react('<:yuliacry:1005511957685743717>');
     }
