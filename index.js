@@ -290,7 +290,6 @@ client.on("interactionCreate", async interaction =>
     }
 
 })
-
 client.login(process.env.BOT_TOKEN);
 
 client.on("messageCreate",async message => 
@@ -568,6 +567,12 @@ client.on("messageCreate",async message =>
                 message.reply(`Pas de mot pareil en ces lieux !`)
         };
    */
+
+    if(message.content === prefix + "roleColor")
+    {
+        message.reply("Choisi une nouvelle couleur parmi ceux que tu as deja").react('<:yuliacry:1005511957685743717>');
+
+    }
 });
 
 
