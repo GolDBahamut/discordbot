@@ -578,9 +578,79 @@ client.on("messageCreate",async message =>
             .addFields
             (
                 {
-                    name: "test1",
+                    name: "<@master>",
                     value: "valuetest1",
                     inline: true
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
+                },
+                {
+                    name: "test2",
+                    value: "valuetest2",
+                    inline: false
                 },
                 {
                     name: "test2",
