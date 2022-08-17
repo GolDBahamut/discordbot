@@ -12,7 +12,8 @@ const client = new Discord.Client(
         [
             Discord.Intents.FLAGS.GUILDS,
             Discord.Intents.FLAGS.GUILD_MESSAGES,
-            Discord.Intents.FLAGS.GUILD_MEMBERS
+            Discord.Intents.FLAGS.GUILD_MEMBERS,
+            Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS
 
             //Discord.Intents.FLAGS.DIRECT_MESSAGES
         ]
@@ -572,9 +573,25 @@ client.on("messageCreate",async message =>
     {    
 
         const roleSelect = await message.reply
-        ("Choisis une couleur parmis ceux que tu as déjà \n ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ \n\n <@&892679883799543829>\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1 ");
+        ("Choisis une couleur parmis ceux que tu as déjà \n ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ \n\n <@&891980811371421737> \n <@&891982393966227526>\n <@&892099398862004254>\n @&892099200706289716>\n <@&892099620866515065>\n <@&891763690234331156>\n <@&892100088061624320>\n <@&914974010129920030>\n <@&914974408546848779>\n <@&914974490558079056>\n <@&914974548028424324>\n <@&894195128938410045>\n <@&894195604241137684>\n <@&894270648392765441>\n <@&894195365308399637>\n <@&892138335940784138>");
 
-        roleSelect.react('<:yuliacry:1005511957685743717>');
+        roleSelect.react('✌️');
+        roleSelect.react('🚲');
+        roleSelect.react('📖');
+        roleSelect.react('🎈');
+        roleSelect.react('🎼');
+        roleSelect.react('💥');
+        roleSelect.react('🐉');
+        roleSelect.react('🏫');
+        roleSelect.react('🔆');
+        roleSelect.react('⚡️');
+        roleSelect.react('🪐');
+        roleSelect.react('🌱');
+        roleSelect.react('🔪');
+        roleSelect.react('🌷');
+        roleSelect.react('🌟');
+        roleSelect.react('🦋');
+
     }
 });
 
