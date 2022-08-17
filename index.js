@@ -504,6 +504,7 @@ client.on("messageCreate",async message =>
     else*/
     if (liens.some(word => message.toString().toLowerCase().includes(word))) 
     {
+        if(message.guild.id === "866387537484578816") return;
         message.delete().catch(e => 
             console.error("Couldn't delete message.")); 
             message.reply(`Vous n'avez pas le niveau nécessaire pour effectuer ceci \n You do not have the required level to do this`)
