@@ -568,12 +568,28 @@ client.on("messageCreate",async message =>
                 message.reply(`Pas de mot pareil en ces lieux !`)
         };
    */
+    
 
+
+});
+
+
+client.on("messageReactionAdd",async reaction => 
+{
+
+    const react = reaction.message ;
+    const emojiName = reaction.emoji.name;
+    const member = react.guild.members.cache.get(user.id);
+    
+    
+    //var levelchanel = client.channels.cache.get("891976728103231519")
     if(message.content === prefix + "color")
     {    
 
+        if(member.user.bot)return;
+
         const roleSelect = await message.reply
-        ("Choisis une couleur parmis ceux que tu as déjà \n ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ \n\n <@&891980811371421737> \n <@&891982393966227526>\n <@&892099398862004254>\n @&892099200706289716>\n <@&892099620866515065>\n <@&891763690234331156>\n <@&892100088061624320>\n <@&914974010129920030>\n <@&914974408546848779>\n <@&914974490558079056>\n <@&914974548028424324>\n <@&894195128938410045>\n <@&894195604241137684>\n <@&894270648392765441>\n <@&894195365308399637>\n <@&892138335940784138>");
+        ("Choisis une couleur parmis ceux que tu as déjà \n ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ \n\n <@&891980811371421737> \n <@&891982393966227526>\n <@&892099200706289716>\n <@&892099200706289716>\n <@&892099620866515065>\n <@&891763690234331156>\n <@&892100088061624320>\n <@&914974010129920030>\n <@&914974408546848779>\n <@&914974490558079056>\n <@&914974548028424324>\n <@&894195128938410045>\n <@&894195604241137684>\n <@&894270648392765441>\n <@&894195365308399637>\n <@&892138335940784138>");
 
         roleSelect.react('✌️');
         roleSelect.react('🚲');
@@ -592,11 +608,14 @@ client.on("messageCreate",async message =>
         roleSelect.react('🌟');
         roleSelect.react('🦋');
 
+
+        if(emojiName === '✌️')
+        {
+            member.roles.add("1009509744974758028")
+        }
+
     }
 });
-
-
-
 /////////////////////////////////////////////////
 
 //Gestion des arrivee et depart d'un membre
