@@ -581,10 +581,6 @@ client.on("messageCreate",async message =>
 client.on("messageReactionAdd",async reaction => 
 {
 
-    const react = reaction.message ;
-    const emojiName = reaction.emoji.name;
-    const member = react.guild.members.cache.get(user.id);
-    
     
     //var levelchanel = client.channels.cache.get("891976728103231519")
     if(message.content === prefix + "color")
