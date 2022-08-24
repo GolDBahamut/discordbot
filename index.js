@@ -115,6 +115,8 @@ client.on("ready", async() => {
 //arreter le bot
 client.on("interactionCreate", async interaction => 
 {    
+    if(message.guild.id === "866387537484578816") return;
+
     if(interaction.isCommand())
     {
         if(interaction.member.permissions.has("ADMINISTRATOR"))
@@ -229,8 +231,14 @@ client.on("interactionCreate", async interaction =>
                 interaction.reply(
                     {
                         content: number + " messages correctement supprimés" , ephemeral:true
-                    }
-                )}
+                        
+                    })
+                const attachment = new Discord.MessageAttachment("./ainzstm.gif");
+
+                interaction.channel.send({files : [attachment]})
+                console.log("image envoyé.");
+                
+                }
                 else
                 {
                     interaction.reply(
@@ -297,8 +305,10 @@ client.login(process.env.BOT_TOKEN);
 
 client.on("messageCreate",async message => 
 {
+    if(message.guild.id === "866387537484578816") return;
+
     var hello = ["hello","salut","bonjour","bienvenue"];
-    var greetings = ["hello","salut","bonjour","bienvenue"];
+    var greetings = ["Hello !","Bonjour !","Bienvenue !","Bien le bonjour !"];
 
     var nuit = ["bonsoir le bot"];
     var modo = ["peut etre modo","peut être modo","peut etre moderateur","peut être moderateur","peut etre modérateur","peut être modérateur"];
