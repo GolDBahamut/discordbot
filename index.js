@@ -323,8 +323,8 @@ client.on("messageCreate",async message =>
 
     if (message.author.bot)return;//permet de detecter que l'auteur du message 
 
-
-    if(message.content == prefix + questMarks + "<@" + bot.id +">")
+    var botid = "<@983789282919612416>"
+    if(message.content == prefix + questMarks + botid)
     {
         //message.reply("Quelle est votre question ?"); 
 
