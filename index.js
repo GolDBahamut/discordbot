@@ -115,7 +115,7 @@ client.on("ready", async() => {
 //arreter le bot
 client.on("interactionCreate", async interaction => 
 {    
-    if(message.guild.id === "866387537484578816") return;
+    if(interaction.guild.id === "866387537484578816") return;
 
     if(interaction.isCommand())
     {
