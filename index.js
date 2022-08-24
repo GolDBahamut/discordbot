@@ -316,12 +316,12 @@ client.on("messageCreate",async message =>
     {
         message.reply("Quelle est votre question ?"); 
 
-        if (questMarks.some(word => message.toString().toLowerCase().includes(word))) 
+        if (questMarks.some(word => message.toString().includes(word))) 
         {
         
-        const messages = ["message one", "message two", "message three", "message four"]
+        const answers = ["message one", "message two", "message three", "message four"]
 
-        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        const randomMessage = answers[Math.floor(Math.random() * answers.length)];
 
         console.log(randomMessage)
         }
