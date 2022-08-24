@@ -324,19 +324,15 @@ client.on("messageCreate",async message =>
     if (message.author.bot)return;//permet de detecter que l'auteur du message 
 
 
-    if(message.content == prefix + "question")
+    if(message.content == prefix + questMarks + "<@" + bot.id +">")
     {
-        message.reply("Quelle est votre question ?"); 
+        //message.reply("Quelle est votre question ?"); 
 
-        if (questMarks.some(word => message.toString().includes(word))) 
-        {
-        
         const answers = ["message one", "message two", "message three", "message four"]
 
         const randomMessage = answers[Math.floor(Math.random() * (answers.length))];
         message.reply(answers[randomMessage])
         console.log(randomMessage)
-        }
 
     }
 
