@@ -298,6 +298,8 @@ client.login(process.env.BOT_TOKEN);
 client.on("messageCreate",async message => 
 {
     var hello = ["hello","salut","bonjour","bienvenue"];
+    var greetings = ["hello","salut","bonjour","bienvenue"];
+
     var nuit = ["bonsoir le bot"];
     var modo = ["peut etre modo","peut être modo","peut etre moderateur","peut être moderateur","peut etre modérateur","peut être modérateur"];
     var news = ["ca va le bot","quoi de neuf le bot","ça va le bot"];
@@ -339,10 +341,15 @@ client.on("messageCreate",async message =>
 
     if (hello.some(word => message.toString().toLowerCase().includes(word))) 
     {
-        const randomMessage = hello[Math.floor(Math.random() * (hello.length))];
-        message.channel.send(hello[randomMessage])
+        /*const randomMessage = greetings[Math.floor(Math.random() * (greetings.length))];
+        message.channel.send(greetings[randomMessage])*/
+
+        let randomMessage = Math.floor(Math.random() * (greetings.length))
+        message.reply(greetings[randomMessage])
         console.log(randomMessage)
+
     }
+    
     if (nuit.some(word => message.toString().toLowerCase().includes(word))) 
     {
         message.channel.send("Bonsoir !"); //permet de repondre a un message sans quil soit afficher comme une reponse
