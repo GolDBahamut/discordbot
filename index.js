@@ -320,6 +320,31 @@ client.on("messageCreate",async message =>
     var musicLink = [];
     var questMarks = ["?"];
 
+    if (message.author.id != ownerID) {
+        return message.channel.send("Seul mon créateur peut me demander une requete pareille")
+      }
+        try {
+          const code = args.join(" ");
+          if (!code) {
+             return message.channel.send("Que voulez vous evaluez ?")
+          }
+          
+          let evaled = eval(code);
+  
+          if (typeof evaled !== "string")
+            evaled = require("util").inspect(evaled);
+  
+            let embed = new MessageEmbed()
+            .setAuthor("Eval", message.author.avatarURL())
+            .addField("Input", `\`\`\`${code}\`\`\``)
+            .addField("Output", `\`\`\`${evaled}\`\`\``)
+            .setColor("GREEN")
+  
+          message.channel.send({embeds: [embed]});
+        } catch (err) {
+          message.channel.send(`\`ERROR\` \`\`\`\n${err}\`\`\``);
+      }
+
 
     if (message.author.bot)return;//permet de detecter que l'auteur du message 
 
