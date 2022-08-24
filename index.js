@@ -353,7 +353,7 @@ client.on("messageCreate",async message =>
 
     }
 
-    if (testing.some(word => message.toString().toLowerCase().includes(word))) 
+    if (message.content == "test" ) 
     {
         message.react('<:soraJudge:907721258827939890>');
     }
