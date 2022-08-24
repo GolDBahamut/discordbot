@@ -339,8 +339,9 @@ client.on("messageCreate",async message =>
 
     if (hello.some(word => message.toString().toLowerCase().includes(word))) 
     {
-        message.channel.send("Hello !"); //permet de repondre a un message sans quil soit afficher comme une reponse
-
+        const randomMessage = hello[Math.floor(Math.random() * (hello.length))];
+        message.channel.send(hello[randomMessage])
+        console.log(randomMessage)
     }
     if (nuit.some(word => message.toString().toLowerCase().includes(word))) 
     {
@@ -353,7 +354,7 @@ client.on("messageCreate",async message =>
 
     }
 
-    if (message.content == "test" ) 
+    if (testing.some(word => message.toString().toLowerCase().includes(word))) 
     {
         message.react('<:soraJudge:907721258827939890>');
     }
@@ -591,9 +592,12 @@ client.on("messageCreate",async message =>
     }
     
     /*
+
     const BannedWords = [
         "salaud","connard","merde"
-    ]
+    ]*/
+    
+    /*
 
         if (BannedWords.some(word => message.toString().toLowerCase().includes(word))) 
         {
