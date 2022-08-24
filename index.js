@@ -314,7 +314,7 @@ client.on("messageCreate",async message =>
 
     if(message.content == prefix + "question")
     {
-        message.channel.reply("Quelle est votre question ?"); 
+        message.reply("Quelle est votre question ?"); 
 
         if (questMarks.some(word => message.toString().toLowerCase().includes(word))) 
         {
