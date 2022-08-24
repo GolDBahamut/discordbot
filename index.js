@@ -50,6 +50,8 @@ const leon = new SlashCommandBuilder()
 
 
 const prefix = "b.";
+const prefixmaj = "B.";
+
 var nbTickets = 0 ;
 
 process.on('unhandledRejection', function(e) {
@@ -303,9 +305,37 @@ client.on("messageCreate",async message =>
     var GN = ["bonne nuit"];
     var nomnom = ["miam miam","nom nom","trop bon"];
     var kaguyasan = ["comme c'est mignon","o kawai koto"];
+    var musicLink = [];
+    var questMarks = ["?"];
 
 
     if (message.author.bot)return;//permet de detecter que l'auteur du message 
+
+
+    if(message.content == prefix + "question")
+    {
+        message.channel.reply("Quelle est votre question ?"); 
+
+        if (questMarks.some(word => message.toString().toLowerCase().includes(word))) 
+        {
+        
+        const messages = ["message one", "message two", "message three", "message four"]
+
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+        console.log(randomMessage)
+        }
+
+    }
+
+
+    if (message.content == prefix + "music" + musicLink || message.content == prefixmaj + "music" + musicLink )
+    {
+
+
+
+    }
+
 
     if (hello.some(word => message.toString().toLowerCase().includes(word))) 
     {
@@ -513,7 +543,7 @@ client.on("messageCreate",async message =>
             message.reply(`Vous n'avez pas le niveau nécessaire pour effectuer ceci \n You do not have the required level to do this`)
     };
     
-    if (message.content == "ratio" || message.content == "Ratio" /*&& message.author === ownerID*/)
+    if (message.content == "ratio" || message.content == "Ratio" && message.author.id === ownerID)
     {
 
         const attachment = new Discord.MessageAttachment("./getRatio.gif");
@@ -577,10 +607,13 @@ client.on("messageCreate",async message =>
 
 });
 
-
+/*
 client.on("messageReactionAdd",async reaction => 
 {
-
+    const react = reaction.message ;
+    const emojiName = reaction.emoji.name;
+    const member = react.guild.members.cache.get(user.id);
+    
     
     //var levelchanel = client.channels.cache.get("891976728103231519")
     if(message.content === prefix + "color")
@@ -616,6 +649,8 @@ client.on("messageReactionAdd",async reaction =>
 
     }
 });
+
+*/
 /////////////////////////////////////////////////
 
 //Gestion des arrivee et depart d'un membre
