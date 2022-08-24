@@ -321,8 +321,8 @@ client.on("messageCreate",async message =>
         
         const answers = ["message one", "message two", "message three", "message four"]
 
-        const randomMessage = answers[Math.floor(Math.random() * answers.length)];
-
+        const randomMessage = answers[Math.floor(Math.random() * (answers.length))];
+        message.reply(answers[randomMessage])
         console.log(randomMessage)
         }
 
