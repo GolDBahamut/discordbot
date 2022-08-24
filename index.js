@@ -235,7 +235,7 @@ client.on("interactionCreate", async interaction =>
                     })
                 const attachment = new Discord.MessageAttachment("./ainzstm.gif");
 
-                interaction.channel.send({files : [attachment]})
+                interaction.followUp({embeds: [embed] ,files : [attachment]})
                 console.log("image envoyé.");
                 
                 }
